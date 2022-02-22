@@ -1,7 +1,6 @@
 require 'yaml'
 DATA = YAML.load_file('mortgage_data.yml')
-
-LANGUAGE = 'english'
+LANGUAGE = DATA['language']
 
 def prompt(message)
   puts "=> #{DATA[LANGUAGE][message]}"
@@ -19,46 +18,40 @@ def get_number
   gets.chomp.delete(' ').delete('$').delete('%').delete(',')
 end
 
+def get_integer
+  number = ''
+  loop do
+    number = get_number
+    break if integer?(number)
+    prompt('invalid_number')
+  end
+  number
+end
+
+def get_float
+  number = ''
+  loop do
+    number = get_number
+    break if float?(number) || integer?(number)
+    prompt('invalid_number')
+  end
+  number
+end
+
 prompt("welcome")
 loop do
-  # Get the loan amount from the user
-  # validate the amount is a float
-  # save the loan amount to a variable
+  prompt("loan_amount")
+  loan_amount = get_integer
 
-  loan_amount = ''
+  puts loan_amount
 
-  loop do
-    prompt("loan_amount")
-    loan_amount = get_number
-    break if float?(loan_amount) || integer?(loan_amount)
-    prompt("invalid_number")
-  end
+  prompt("apr")
+  apr = get_float
+  puts apr
 
-  # Get the APR from the user
-  # validate the amount is a float
-  # save the APR to a variable
-
-  apr = ''
-
-  loop do
-    prompt("apr")
-    apr = get_number
-    break if float?(apr) || integer?(apr)
-    prompt("invalid_number")
-  end
-
-  # Get the loan duration from the user
-  # validate the amount is an integer
-  # save the load duration to a variable
-
-  duration = ''
-
-  loop do
-    prompt("duration")
-    duration = get_number
-    break if integer?(duration)
-    prompt("invalid_number")
-  end
+  prompt("duration")
+  duration = get_integer
+  puts duration
 
   # calculate the monthly interest rate
   # return APR / 12

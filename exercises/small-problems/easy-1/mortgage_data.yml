@@ -1,17 +1,17 @@
-
-english:
-  welcome: "Welcome to the Mortgage Calculator!"
-  loan_amount: "What is the amount of the loan?"
-  invalid_number: "That is not a valid response. Please try again."
-  apr: "What is the apr? (Do not include the % symbol in your response)?"
-  duration: "What is the duration of the loan? (in years)"
-  monthly_payment: "Your monthly payment will be:"
+language: 'en'
+en:
+  welcome: 'Welcome to the Mortgage Calculator!'
+  loan_amount: 'What is the amount of the loan?'
+  invalid_number: 'That is not a valid response. Please try again.'
+  apr: 'What is the apr? (Do not include the % symbol in your response)?'
+  duration: 'What is the duration of the loan? (in years)'
+  monthly_payment: 'Your monthly payment will be:'
   repeat_calculation: "Would you like to calculate another loan? ('Y' to calculate again)"
-espanol:
-  welcome: "¡Bienvenido a la calculadora de hipotecas!"
-  loan_amount: "¿Cuál es el monto del préstamo?"
-  invalid_number: "Esa no es una respuesta válida. Inténtalo de nuevo."
-  apr: "¿Cuál es la tasa de porcentaje anual? (No incluya el símbolo % en su respuesta)?"
-  duration: "¿Cuánto tiempo durará el préstamo? (en años)"
-  monthly_payment: "Su pago mensual será de:"
+es:
+  welcome: '¡Bienvenido a la calculadora de hipotecas!'
+  loan_amount: '¿Cuál es el monto del préstamo?'
+  invalid_number: 'Esa no es una respuesta válida. Inténtalo de nuevo.'
+  apr: '¿Cuál es la tasa de porcentaje anual? (No incluya el símbolo % en su respuesta)?'
+  duration: '¿Cuánto tiempo durará el préstamo? (en años)'
+  monthly_payment: 'Su pago mensual será de:'
   repeat_calculation: "¿Te gustaría calcular otro préstamo? ('Y' para calcular de nuevo)"
